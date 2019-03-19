@@ -1,7 +1,12 @@
-const sum = require('./modules/sum.js');
-const guard = require('./modules/guard.js');
-const abc = require('jquery');
+import './pug/index.pug'
 
-console.log(sum(23,16));
-console.log(guard('German'));
-console.log(abc);
+
+ 
+
+
+
+
+// import 'vue'
+// import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
+// import Vue from 'vue'
+// window.Vue = require('vue')
