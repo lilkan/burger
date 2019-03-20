@@ -1,0 +1,69 @@
+extends ../base
+block head
+    title Мои работы
+block content
+    section.section.hero
+        ul.socials.hero__socials
+            - 
+                        var links = [
+                            ['https://vk.com/id95685477', 'vk'],
+                            ['https://twitter.com/conscientia_non','tw'],
+                            ['https://github.com/lilkan','git'],
+                        ]
+            each item in links
+                li.socials__item
+                    a(href=`${item[0]}`).social__link
+                        img(src=require(`./img/${item[1]}.png`)).social__img
+        a(href="").hamburger.hero__menu
+            img(src=require("./img/burger.png"), alt="").hamburger
+        .hero__title
+            .section-title
+            .hero__user.user
+                .user-pic
+                    img(src=require("./img/user__img.jpg")).user__pick-img
+                .user__info
+                    .user__name Герман Бежев
+                    .user__data Трактакт о нелегком пути
+        .hero_arrow.arrow-down
+
+    footer.footer
+            .footer__col-first
+                .footer__row
+                    .footer__text
+                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+            hr.hr__footer
+            .footer__col-second
+                .footer__row
+                    .footer__menu
+                        nav.menu
+                            ul.menu__list
+                                -
+                                    var pages = [
+                                        ['./works.html','Мои работы'],
+                                        ['./about.html','Обо мне'],
+                                        ['./blog.html', 'Блог'],
+                                        ['./index.html','Авторизация'],
+                                    ]
+                                each item in pages
+                                    li.menu__item
+                                        a(href=`${item[0]}`).menu__link #{item[1]}
+                .footer__row
+                    .footer__socials
+                        ul.socials.socials_rounded
+                            - 
+                                var links = [
+                                    ['https://vk.com/id95685477', 'vk'],
+                                    ['https://twitter.com/conscientia_non','tw'],
+                                    ['https://github.com/lilkan','git'],
+                                ]
+                            each item in links
+                                li.socials__item.footer__items
+                                    a(href=`${item[0]}`).social__link
+                                        img(src=require(`./img/${item[1]}.png`)).social__img
+            hr.hr__footer.right
+            .footer__col-third
+                .footer__row
+                    .footer__text
+                        ul.footer__contacts
+                            each item in ['@lilkan', "+79992159622", 'doooomen@gmail.com', 'Санкт-Петербург']
+                                li.footer__contacts-item #{item}

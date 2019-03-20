@@ -1,0 +1,115 @@
+.about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "left right"
+}
+
+.about__left {
+    grid-area: left;
+    background-color: $left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about__right {
+    grid-area: right;
+    background-color: $right;
+}
+.user-description__avatar {
+    width: rem(440px);
+    height: rem(440px);
+}
+.about__triangle {
+    width: 100%;
+}
+.about__left-title {
+    width: 50%;
+}
+.block-title {
+    font-family: 'sansus';
+    color: $text;
+    font-size: rem(63px);
+    text-transform: uppercase;
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+.block-title-img {
+    position: absolute;
+    top: -50px;
+    left: 85px;
+}
+.about__left-content {
+    width: 50%;
+}
+.block-subtitle {
+    font-family: 'sansus';
+    color: $text;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: rem(35px);
+    line-height: 40px;
+    margin: 35px 0 15px;
+}
+
+.text-block {
+    @include roboto(normal, normal);
+    color: $text;
+    font-size: rem(16px);
+    line-height: 24px;
+}
+
+hr {
+    width: 90px;
+    height: 3px;
+    background-color: $hr;
+}
+
+.about__right-desc, .about__right-content {
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.skills-row__title {
+    font-size: 28px;
+    color: $text;
+    @include roboto(medium, normal);
+}
+
+.map__data {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 580px;
+    margin-left: -290px;
+    height: 300px;
+    margin-top: -150px;
+    background-color: white;
+    opacity: .7;
+}
+.contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.contacts-row {
+    width: 40%;
+}
+.contacts__item {
+    display: flex;
+    margin-top: 30px;
+}
+.contacts-row__img {
+    width: 45px;
+    height: 45px;
+}
+.contacts-row__icon {
+    line-height: 49px;
+    margin-left: 10px;
+}
+.google-map-img {
+    width: 100%;
+}

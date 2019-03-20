@@ -1,0 +1,60 @@
+
+@mixin bgimg ($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+@mixin circle($width, $color) {
+    width: $width;
+    height: $width;
+    border-radius: $width/2;
+    background-color: $color;
+}
+
+@function rem($px) {
+    @return $px / 16px+0rem;
+}
+
+$right: #f2f0e8;
+$left: #f4f5f0;
+$green: #8ac03e;
+$text: #474b57;
+$hr: #9c9d9f;
+$burgerbg2: #eb8c38;
+
+
+$tablets: 768px;
+$phones: 480px;
+$desktop: 1200px;
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (max-width: $desktop) {
+        @content;
+    }
+}
+     
+body {
+    background-color: grey;
+    position: relative;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.section {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
