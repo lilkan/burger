@@ -25,11 +25,11 @@ block content
                     .user__name Герман Бежев
                     .user__data Трактакт о нелегком пути
         .hero_arrow.arrow-down
-
+        svg.triangle(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1000 85' preserveaspectratio='none')
+                    polygon.left(points='0,0   0,86   500.8,86   500.8,75.5')
+                    polygon.right(points='1000,0   1000,86   500,86   500,75.5')
     section.section.about
         .about__left
-            .about__triangle.about__triangle_left
-                svg.triangle.triangle_fill_white
             .about__left-title
                 .block-title обо мне
                     img(src=require("./img/vector2.png")).block-title-img
@@ -44,8 +44,6 @@ block content
                         p Я веб разработчик из Санкт-Петербурга. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                         p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
         .about__right
-            .about__triangle.about__triangle_right
-                svg.triangle.triangle_fill_beige
             .about__right-title.block-subtitle чем я могу быть вам полезен
                 hr
             .about__right-desc.text-block

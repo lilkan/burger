@@ -88,7 +88,10 @@ let conf = {
                 name: "fonts/[name].[ext]",
               },
             },
-          },
+          },{
+            test: /\.svg$/,
+            loader: 'svg-sprite-loader'
+          }
     ]
     },
     devServer: {

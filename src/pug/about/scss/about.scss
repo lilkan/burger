@@ -1,5 +1,6 @@
 .about {
     display: grid;
+    overflow: visible;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
     grid-template-areas:
@@ -40,6 +41,7 @@
     position: absolute;
     top: -50px;
     left: 85px;
+
 }
 .about__left-content {
     width: 50%;

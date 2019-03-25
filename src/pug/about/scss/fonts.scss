@@ -65,27 +65,7 @@
 }
 
 @mixin roboto($weight, $style) {
-	font-family: 'roboto';
-
-	@if $weight == light {
-		font-weight: lighter;
-	}
-
-	@if $weight == medium {
-		font-weight: 500;
-	}
-
-	@if $weight == bold {
-		font-weight: bold;
-	}
-	@if $weight == normal {
-		font-weight: normal;
-    }
-    
-    @if $style == normal {
-        font-style: normal;
-    }
-    @if $style == italic {
-        font-style: italic;
-    }
+    font-family: 'roboto';
+    font-weight: $weight;
+    font-style: $style;
 }

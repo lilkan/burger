@@ -43,6 +43,21 @@
     width: 26px;
     height: 16px;
 }
+.triangle {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-160px);
+    height: 160px;
+    width: 100%;
+}
+
+.triangle .left {
+    fill: $left;
+}
+
+.triangle .right {
+    fill: $right;
+}
 .hamburger {
     padding-top: 20px;
 }
