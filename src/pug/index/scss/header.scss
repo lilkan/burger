@@ -1,0 +1,98 @@
+.hero {
+    @include bgimg ('./img/fone.png');
+    display: grid;
+    height: 600px;
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 169px 1fr 70px;
+    grid-template-areas:
+    "socials space burger"
+    "content content content";
+}
+.hero__title {
+    grid-area: content;
+}
+.hero__socials {
+    grid-area: socials;
+}
+.socials {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.socials__item {
+    padding-top: 25px;
+    padding-left: 10px;
+}
+.social__link {
+    position: relative;
+}
+
+.hero__menu {
+    grid-area: burger;
+}
+.hero_arrow {
+    grid-area: content;
+}
+.arrow-down {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    margin-left: -13px;
+    @include bgimg ('./img/arrow.png');
+    width: 26px;
+    height: 16px;
+}
+.triangle {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-160px);
+    height: 160px;
+    width: 100%;
+}
+
+.triangle .left {
+    fill: $left;
+}
+
+.triangle .right {
+    fill: $right;
+}
+.hamburger {
+    padding-top: 20px;
+}
+.hero__title {
+    background-image: url("./img/vector.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+}
+.hero__user {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    margin-left: -73px;
+    margin-top: -73px;
+}
+.user__pick-img {
+    width: 147px;
+    height: 147px;
+    border-radius: 50%;
+}
+.user__info {
+    color: white;
+    position: absolute;
+    width: rem(240px);
+    left: 50%;
+    margin-left: rem(-120px);
+    margin-top: rem(20px);
+}
+.user__name{
+    @include roboto(medium, normal);
+    font-size: rem(35px);
+}
+.user__data {
+    @include roboto(normal, normal);
+    font-size: rem(16px);
+    text-align: center;
+}

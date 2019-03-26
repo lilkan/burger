@@ -128,6 +128,11 @@ let conf = {
             filename: 'works.html',
             chunks: ['works', 'common']
           }),
+        new HtmlWebpackPlugin({
+            template: './src/pug/components/components.pug',
+            filename: 'components.html',
+            chunks: ['components', 'common']
+          }),
           ],
 };
 module.exports = conf;

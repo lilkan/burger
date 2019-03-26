@@ -7,11 +7,11 @@ block content
         .about__left
             .about__left-title
                 .block-title обо мне
-                    img(src=require("./img/vector2.png")).block-title-img
+                    img(src=require("../components/pug/img/vector2.png")).block-title-img
             .about__left-content
                 .user-description
                     .user-description__image
-                        img(src=require("./img/user__img.jpg")).user-description__avatar
+                        img(src=require("../components/pug/img/user__img.jpg")).user-description__avatar
                     .user-description__title
                         .block-subtitle кто я
                         hr
@@ -37,7 +37,7 @@ block content
 
     section.section.map
         .google-map
-            img(src=require("./img/snazzy.png")).google-map-img
+            img(src=require("../components/pug/img/snazzy.png")).google-map-img
         .map__data
             .contacts
                 .contacts__title
@@ -54,6 +54,6 @@ block content
                     each item in contacts
                         li.contacts__item.contacts-row
                             .contacts-row__icon
-                                img(src=require(`./img/${item[0]}.png`)).contacts-row__img
+                                img(src=require(`../components/pug/img/${item[0]}.png`)).contacts-row__img
                             .contacts-row__icon.text-block #{item[1]}
     include ../components/pug/footer
