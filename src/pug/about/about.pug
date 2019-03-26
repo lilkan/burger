@@ -2,32 +2,7 @@ extends ../base
 block head
     title Обо мне
 block content
-    section.section.hero
-        ul.socials.hero__socials
-            - 
-                        var links = [
-                            ['https://vk.com/id95685477', 'vk'],
-                            ['https://twitter.com/conscientia_non','tw'],
-                            ['https://github.com/lilkan','git'],
-                        ]
-            each item in links
-                li.socials__item
-                    a(href=`${item[0]}`).social__link
-                        img(src=require(`./img/${item[1]}.png`)).social__img
-        a(href="").hamburger.hero__menu
-            img(src=require("./img/burger.png"), alt="").hamburger
-        .hero__title
-            .section-title
-            .hero__user.user
-                .user-pic
-                    img(src=require("./img/user__img.jpg")).user__pick-img
-                .user__info
-                    .user__name Герман Бежев
-                    .user__data Трактакт о нелегком пути
-        .hero_arrow.arrow-down
-        svg.triangle(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1000 85' preserveaspectratio='none')
-                    polygon.left(points='0,0   0,86   500.8,86   500.8,75.5')
-                    polygon.right(points='1000,0   1000,86   500,86   500,75.5')
+    include ../components/pug/header
     section.section.about
         .about__left
             .about__left-title
@@ -81,44 +56,4 @@ block content
                             .contacts-row__icon
                                 img(src=require(`./img/${item[0]}.png`)).contacts-row__img
                             .contacts-row__icon.text-block #{item[1]}
-    footer.footer
-        .footer__col-first
-            .footer__row
-                .footer__text
-                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-        hr.hr__footer
-        .footer__col-second
-            .footer__row
-                .footer__menu
-                    nav.menu
-                        ul.menu__list
-                            -
-                                var pages = [
-                                    ['./works.html','Мои работы'],
-                                    ['./about.html','Обо мне'],
-                                    ['./blog.html', 'Блог'],
-                                    ['./index.html','Авторизация'],
-                                ]
-                            each item in pages
-                                li.menu__item
-                                    a(href=`${item[0]}`).menu__link #{item[1]}
-            .footer__row
-                .footer__socials
-                    ul.socials.socials_rounded
-                        - 
-                            var links = [
-                                ['https://vk.com/id95685477', 'vk'],
-                                ['https://twitter.com/conscientia_non','tw'],
-                                ['https://github.com/lilkan','git'],
-                            ]
-                        each item in links
-                            li.socials__item.footer__items
-                                a(href=`${item[0]}`).social__link
-                                    img(src=require(`./img/${item[1]}.png`)).social__img
-        hr.hr__footer.right
-        .footer__col-third
-            .footer__row
-                .footer__text
-                    ul.footer__contacts
-                        each item in ['@lilkan', "+79992159622", 'doooomen@gmail.com', 'Санкт-Петербург']
-                            li.footer__contacts-item #{item}
+    include ../components/pug/footer

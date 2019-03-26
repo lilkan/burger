@@ -1,0 +1,26 @@
+section.section.hero
+        ul.socials.hero__socials
+            - 
+                        var links = [
+                            ['https://vk.com/id95685477', 'vk'],
+                            ['https://twitter.com/conscientia_non','tw'],
+                            ['https://github.com/lilkan','git'],
+                        ]
+            each item in links
+                li.socials__item
+                    a(href=`${item[0]}`).social__link
+                        img(src=require(`./img/${item[1]}.png`)).social__img
+        a(href="").hamburger.hero__menu
+            img(src=require("./img/burger.png"), alt="").hamburger
+        .hero__title
+            .section-title
+            .hero__user.user
+                .user-pic
+                    img(src=require("./img/user__img.jpg")).user__pick-img
+                .user__info
+                    .user__name Герман Бежев
+                    .user__data Трактакт о нелегком пути
+        .hero_arrow.arrow-down
+        svg.triangle(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1000 85' preserveaspectratio='none')
+                    polygon.left(points='0,0   0,86   500.8,86   500.8,75.5')
+                    polygon.right(points='1000,0   1000,86   500,86   500,75.5')

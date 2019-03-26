@@ -74,7 +74,7 @@ let conf = {
             use: "pug-loader",
           },
           {
-            test: /\.(png|jpg|gif)$/,
+            test: /\.(png|jpg|gif|svg)$/,
             use: [
               { loader: 'file-loader',
                 options: {
@@ -88,9 +88,6 @@ let conf = {
                 name: "fonts/[name].[ext]",
               },
             },
-          },{
-            test: /\.svg$/,
-            loader: 'svg-sprite-loader'
           }
     ]
     },

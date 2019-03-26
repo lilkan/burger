@@ -59,3 +59,9 @@ ul {
     height: 100%;
     position: relative;
 }
+
+@import "./pug/scss/fonts.scss";
+@import "./pug/scss/header.scss";
+@import "./pug/scss/footer";
+@import "./pug/scss/about";
+@import "./pug/scss/welcome";
